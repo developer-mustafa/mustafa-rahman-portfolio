@@ -23,7 +23,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-[92vh] flex flex-col justify-center pt-28 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden"
+      className="relative pt-24 sm:pt-26 lg:pt-28 pb-12 sm:pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto w-full relative z-10">
         {/* Two-Column Editorial Hero Grid */}
@@ -36,7 +36,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-panel-subtle border border-emerald-500/25 text-xs text-[var(--text-muted)] mb-6 shadow-sm"
+              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-panel-subtle border border-emerald-500/25 text-xs text-[var(--text-muted)] mb-4 shadow-sm"
             >
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
@@ -219,7 +219,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.42 }}
-          className="mt-14 lg:mt-16 w-full grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4"
+          className="mt-10 sm:mt-12 lg:mt-14 w-full grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4"
         >
           {personalProfile.highlights.map((item, idx) => (
             <div
