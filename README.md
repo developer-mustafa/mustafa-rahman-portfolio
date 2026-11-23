@@ -27,6 +27,19 @@ A world-class personal engineering portfolio engineered with an Awwwards-caliber
 
 ---
 
+## 📖 Comprehensive Documentation
+
+Full technical and operational documentation is available in the [`docs/`](docs/README.md) directory:
+
+* 🏛️ **[System Architecture](docs/architecture.md)** — Architectural design, tech stack & decoupled data model.
+* 🌗 **[Dual-Theme Engine](docs/dual-theme-engine.md)** — Obsidian Dark & Apple Slate Light tokens and adaptive window mockups.
+* 🧩 **[Components & Data Catalog](docs/components-and-data.md)** — Catalog of all 15 React components & data schemas.
+* 🧪 **[Automated Testing & Quality](docs/testing-and-quality.md)** — 17 Vitest test suites, jsdom DOM testing & ESLint rules.
+* 📋 **[Spec-Driven Development & AI](docs/spec-driven-development-and-ai.md)** — OpenSpec v2.1 living specs & AI governance rules (`AGENTS.md`).
+* 🚀 **[Deployment & CI/CD Pipeline](docs/deployment-and-cicd.md)** — Vercel edge deployment, GitHub Actions & automated releases.
+
+---
+
 ## 🛠️ Technology Stack
 
 | Domain | Technology |
