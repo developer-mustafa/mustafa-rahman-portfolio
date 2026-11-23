@@ -5,10 +5,11 @@ import {
   Send, 
   MapPin, 
   Globe, 
+  Phone,
   CheckCircle, 
   AlertCircle
 } from "lucide-react";
-import { GithubIcon, LinkedinIcon } from "./BrandIcons";
+import { GithubIcon, LinkedinIcon, WhatsAppIcon } from "./BrandIcons";
 import { personalProfile } from "../data/profile";
 
 export default function Contact() {
@@ -150,6 +151,46 @@ export default function Contact() {
                     <span className="text-[11px] text-[var(--text-dim)] uppercase tracking-wider font-semibold font-mono">Email</span>
                     <p className="text-xs sm:text-sm font-medium text-[var(--text-heading)] group-hover:text-emerald-500 transition-colors truncate">
                       {personalProfile.social.email}
+                    </p>
+                  </div>
+                </a>
+
+                {/* WhatsApp Quick Chat */}
+                <a
+                  href={personalProfile.social.whatsapp}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3.5 p-3.5 rounded-xl card-inner-item hover:border-emerald-500/40 transition-all group"
+                >
+                  <div className="w-10 h-10 rounded-lg bg-emerald-500/15 flex items-center justify-center text-emerald-500 group-hover:bg-emerald-500 group-hover:text-white dark:group-hover:text-black transition-colors">
+                    <WhatsAppIcon size={18} />
+                  </div>
+                  <div className="overflow-hidden">
+                    <div className="flex items-center gap-1.5">
+                      <span className="text-[11px] text-[var(--text-dim)] uppercase tracking-wider font-semibold font-mono">WhatsApp</span>
+                      <span className="text-[9px] px-1.5 py-0.5 rounded bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 font-mono font-semibold">Instant Chat</span>
+                    </div>
+                    <p className="text-xs sm:text-sm font-medium text-[var(--text-heading)] group-hover:text-emerald-500 transition-colors truncate">
+                      {personalProfile.social.phone}
+                    </p>
+                  </div>
+                </a>
+
+                {/* Direct Phone Call */}
+                <a
+                  href={`tel:${personalProfile.social.phoneRaw}`}
+                  className="flex items-center gap-3.5 p-3.5 rounded-xl card-inner-item hover:border-emerald-500/40 transition-all group"
+                >
+                  <div className="w-10 h-10 rounded-lg bg-teal-500/15 flex items-center justify-center text-teal-500 group-hover:bg-emerald-500 group-hover:text-white dark:group-hover:text-black transition-colors">
+                    <Phone size={18} />
+                  </div>
+                  <div className="overflow-hidden">
+                    <div className="flex items-center gap-1.5">
+                      <span className="text-[11px] text-[var(--text-dim)] uppercase tracking-wider font-semibold font-mono">Direct Call</span>
+                      <span className="text-[9px] px-1.5 py-0.5 rounded bg-teal-500/15 text-teal-600 dark:text-teal-400 font-mono font-semibold">Available</span>
+                    </div>
+                    <p className="text-xs sm:text-sm font-medium text-[var(--text-heading)] group-hover:text-emerald-500 transition-colors truncate">
+                      {personalProfile.social.phone}
                     </p>
                   </div>
                 </a>

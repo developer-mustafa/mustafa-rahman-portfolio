@@ -1,5 +1,5 @@
-import { ArrowUp, Globe, Mail } from "lucide-react";
-import { GithubIcon, LinkedinIcon } from "./BrandIcons";
+import { ArrowUp, Globe, Mail, Phone } from "lucide-react";
+import { GithubIcon, LinkedinIcon, WhatsAppIcon } from "./BrandIcons";
 import { personalProfile } from "../data/profile";
 
 export default function Footer() {
@@ -82,6 +82,24 @@ export default function Footer() {
                 title="Email: mustafa.rahman.official@gmail.com"
               >
                 <Mail size={16} />
+              </a>
+              <a
+                href={personalProfile.social.whatsapp}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Chat on WhatsApp"
+                className="p-2 rounded-lg card-inner-item text-[var(--text-dim)] hover:text-emerald-500 hover:border-emerald-500/40 transition-colors"
+                title={`WhatsApp: ${personalProfile.social.phone}`}
+              >
+                <WhatsAppIcon size={16} />
+              </a>
+              <a
+                href={`tel:${personalProfile.social.phoneRaw}`}
+                aria-label="Direct Phone Call"
+                className="p-2 rounded-lg card-inner-item text-[var(--text-dim)] hover:text-emerald-500 hover:border-emerald-500/40 transition-colors"
+                title={`Call: ${personalProfile.social.phone}`}
+              >
+                <Phone size={16} />
               </a>
             </div>
           </div>

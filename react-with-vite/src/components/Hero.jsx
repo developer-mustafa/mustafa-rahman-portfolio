@@ -4,9 +4,10 @@ import {
   MapPin,
   Globe,
   Mail,
+  Phone,
   ShieldCheck
 } from "lucide-react";
-import { GithubIcon, LinkedinIcon } from "./BrandIcons";
+import { GithubIcon, LinkedinIcon, WhatsAppIcon } from "./BrandIcons";
 import { personalProfile } from "../data/profile";
 
 export default function Hero() {
@@ -156,6 +157,24 @@ export default function Hero() {
                   title="Website: mustafaofficial.com"
                 >
                   <Globe size={17} />
+                </a>
+                <a
+                  href={personalProfile.social.whatsapp}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Chat on WhatsApp"
+                  className="p-2.5 rounded-lg text-[var(--text-dim)] hover:text-emerald-500 glass-panel hover:border-emerald-500/40 transition-all"
+                  title={`Chat on WhatsApp: ${personalProfile.social.phone}`}
+                >
+                  <WhatsAppIcon size={17} />
+                </a>
+                <a
+                  href={`tel:${personalProfile.social.phoneRaw}`}
+                  aria-label="Direct Call"
+                  className="p-2.5 rounded-lg text-[var(--text-dim)] hover:text-emerald-500 glass-panel hover:border-emerald-500/40 transition-all"
+                  title={`Call: ${personalProfile.social.phone}`}
+                >
+                  <Phone size={17} />
                 </a>
               </div>
             </motion.div>

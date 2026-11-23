@@ -15,6 +15,7 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import ScrollProgress from "./components/ScrollProgress";
 import BackgroundEffects from "./components/BackgroundEffects";
+import FloatingContact from "./components/FloatingContact";
 
 const sectionIds = [
   "hero",
@@ -90,6 +91,9 @@ function App() {
 
       {/* Footer */}
       <Footer isDark={isDark} />
+
+      {/* Floating Direct Contact Widget (WhatsApp & Call) */}
+      <FloatingContact />
     </div>
   );
 }

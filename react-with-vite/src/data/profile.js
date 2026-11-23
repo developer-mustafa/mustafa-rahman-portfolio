@@ -45,6 +45,9 @@ I strongly believe technology should solve real-world problems, improve producti
   social: {
     website: "https://mustafaofficial.com",
     email: "mustafa.rahman.official@gmail.com",
+    phone: "+880 1840-643946",
+    phoneRaw: "+8801840643946",
+    whatsapp: "https://wa.me/8801840643946",
     github: "https://github.com/developer-mustafa",
     linkedin: "https://bd.linkedin.com/in/developer-mustafa"
   },

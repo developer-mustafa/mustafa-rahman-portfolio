@@ -19,6 +19,8 @@ describe('Data Integrity & Architecture Tests', () => {
     it('contains verified contact and social information', () => {
       expect(personalProfile.social.email).toBe('mustafa.rahman.official@gmail.com');
       expect(personalProfile.social.github).toMatch(/github\.com\/developer-mustafa/);
+      expect(personalProfile.social.phone).toBe('+880 1840-643946');
+      expect(personalProfile.social.whatsapp).toContain('8801840643946');
       expect(personalProfile.location.country).toBe('Bangladesh');
     });
 
