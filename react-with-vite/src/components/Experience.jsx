@@ -3,7 +3,10 @@ import {
   Building2, 
   MapPin, 
   CheckCircle2, 
-  Info
+  Info,
+  Layers,
+  Server,
+  Cloud
 } from "lucide-react";
 import { experienceData } from "../data/experience";
 
@@ -90,6 +93,63 @@ export default function Experience() {
                   <div className="mt-2 text-[11px] text-[var(--text-dim)] flex items-center gap-1.5 italic">
                     <Info size={12} className="shrink-0 text-[var(--text-dim)]" />
                     <span>{item.responsibilitiesNote}</span>
+                  </div>
+                )}
+
+                {/* Full-Stack Technical Pillars: Frontend, Backend, DevOps */}
+                {item.skillsBreakdown && (
+                  <div className="mt-4 p-3.5 sm:p-4 rounded-xl card-inner-item border border-[var(--card-inner-border)] space-y-2.5">
+                    <div className="text-[10px] sm:text-[11px] font-semibold text-[var(--text-heading)] uppercase tracking-wider font-mono flex items-center gap-1.5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                      <span>Full-Stack Engineering Pillars</span>
+                    </div>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+                      {/* Frontend Pillar */}
+                      <div className="p-2.5 rounded-lg bg-black/[0.02] dark:bg-white/[0.02] border border-cyan-500/20 text-left">
+                        <div className="flex items-center gap-1.5 text-cyan-600 dark:text-cyan-400 text-xs font-semibold font-mono mb-1.5">
+                          <Layers size={13} />
+                          <span>Frontend</span>
+                        </div>
+                        <div className="flex flex-wrap gap-1">
+                          {item.skillsBreakdown.frontend.map((skill, sIdx) => (
+                            <span key={sIdx} className="text-[10px] px-1.5 py-0.5 rounded bg-cyan-500/10 text-cyan-700 dark:text-cyan-300 font-mono">
+                              {skill}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+
+                      {/* Backend Pillar */}
+                      <div className="p-2.5 rounded-lg bg-black/[0.02] dark:bg-white/[0.02] border border-emerald-500/20 text-left">
+                        <div className="flex items-center gap-1.5 text-emerald-600 dark:text-emerald-400 text-xs font-semibold font-mono mb-1.5">
+                          <Server size={13} />
+                          <span>Backend</span>
+                        </div>
+                        <div className="flex flex-wrap gap-1">
+                          {item.skillsBreakdown.backend.map((skill, sIdx) => (
+                            <span key={sIdx} className="text-[10px] px-1.5 py-0.5 rounded bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 font-mono">
+                              {skill}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+
+                      {/* DevOps Pillar */}
+                      <div className="p-2.5 rounded-lg bg-black/[0.02] dark:bg-white/[0.02] border border-purple-500/20 text-left">
+                        <div className="flex items-center gap-1.5 text-purple-600 dark:text-purple-400 text-xs font-semibold font-mono mb-1.5">
+                          <Cloud size={13} />
+                          <span>DevOps & Cloud</span>
+                        </div>
+                        <div className="flex flex-wrap gap-1">
+                          {item.skillsBreakdown.devops.map((skill, sIdx) => (
+                            <span key={sIdx} className="text-[10px] px-1.5 py-0.5 rounded bg-purple-500/10 text-purple-700 dark:text-purple-300 font-mono">
+                              {skill}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 )}
 

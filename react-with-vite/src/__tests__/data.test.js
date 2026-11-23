@@ -74,6 +74,15 @@ describe('Data Integrity & Architecture Tests', () => {
         expect(exp.highlights.length).toBeGreaterThan(0);
       });
     });
+
+    it('contains Full-Stack engineering skill pillars (Frontend, Backend, DevOps) for key engineering roles', () => {
+      const solarwinds = experienceData.find((e) => e.id === 'solarwinds');
+      expect(solarwinds).toBeDefined();
+      expect(solarwinds?.skillsBreakdown).toBeDefined();
+      expect(Array.isArray(solarwinds?.skillsBreakdown?.frontend)).toBe(true);
+      expect(Array.isArray(solarwinds?.skillsBreakdown?.backend)).toBe(true);
+      expect(Array.isArray(solarwinds?.skillsBreakdown?.devops)).toBe(true);
+    });
   });
 
   describe('Skills Data OpenSpec Compliance', () => {

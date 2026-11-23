@@ -73,7 +73,7 @@ src/components/
 * Each contains `id`, `name`, `tagline`, `category`, `features`, `technologies`, `website`, `github`.
 
 ### `experience.js` (`experienceData`)
-* Contains verified career history (SolarWinds Remote USA, Software Engineering Firm Istanbul, etc.) with verified roles, dates, overviews, and bulleted highlights.
+* Contains verified career history (SolarWinds Remote USA, Software Engineering Firm Istanbul, Technology Solutions Hyderabad, etc.) with verified roles, dates, overviews, bulleted achievements, and structured **Full-Stack Engineering Pillars** (`skillsBreakdown` across Frontend, Backend, and DevOps & Cloud).
 
 ### `education.js` (`educationData`)
 * Contains academic leadership, lecturer roles (Madbarhat Islamia Fazil Madrasah), teaching contributions, and authentic verified metrics (`226+` HSC ICT A+ results, `90%` pass rate).
