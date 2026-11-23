@@ -1,0 +1,56 @@
+schema: spec-driven
+
+context: |
+  Project: Mustafa Rahman - Senior Software Engineer & ICT Educator Portfolio
+  Application Path: react-with-vite/src/
+  Operating Mode: Autonomous Development with Human Approval Gates
+  Technology Stack:
+    - Framework: React 19 (19.3.1), Vite 8.3.6
+    - Language: JavaScript ES6+ (Strictly NO TypeScript)
+    - Styling: Tailwind CSS v4.3.5 (@tailwindcss/vite), Custom CSS Variables Engine
+    - Motion: Motion for React (motion 14.14.0)
+    - Scrolling: Lenis Smooth Scrolling (lenis 1.3.27) with prefers-reduced-motion
+    - Icons: Lucide React (1.78.0) & Custom BrandIcons.jsx
+    - Form/Email: @emailjs/browser (5.0.3)
+    - Theme Engine: Dual-theme (Dark / Light) with CSS variables & localStorage persistence
+  Architectural Constraints:
+    - Pure Single-Page Application (SPA) with zero backend server dependency.
+    - All portfolio data is centralized in src/data/.
+    - Strictly use verified personal and career information for Mustafa Rahman.
+    - All external links must open in new tabs with rel="noopener noreferrer".
+    - Responsive mobile-first layout meeting Awwwards and Apple design standards.
+  Autonomous Policy & Gates:
+    - AI executes autonomously: explore, propose, implement approved tasks, run tests/build, fix bugs.
+    - Human approval required: production deployment, database operations, auth/security changes, secrets/env changes, destructive operations.
+
+rules:
+  proposal:
+    - Clearly define the problem, user value, and proposed solution.
+    - Must specify exact impact on existing components and data modules.
+    - Explicitly state out-of-scope items and non-goals.
+    - Include a rollback and risk mitigation strategy.
+  specs:
+    - Specify functional requirements using Given/When/Then or structured behavioral criteria.
+    - Include edge cases, responsive breakpoints, and accessibility (WCAG AA).
+    - Ensure Dark and Light theme behaviors are explicitly defined.
+  design:
+    - Detail component hierarchy, prop contracts, and state management.
+    - Document motion curves, durations, and reduced-motion fallbacks.
+    - Ensure zero regression on existing CSS tokens and responsive layouts.
+  tasks:
+    - Group tasks into logical, sequential phases.
+    - Each task must have clear verification criteria.
+    - Include explicit verification steps (linting, build verification, visual check).
+
+operations:
+  apply:
+    guidance:
+      - Work incrementally and verify after each major component change.
+      - Run 'npm run lint' and 'npm run build' inside react-with-vite to ensure zero syntax or build errors.
+      - Never modify files outside the scope of approved tasks.
+      - Never fake test results or skip validation steps.
+      - Respect human approval gates before destructive actions, deployments, or auth changes.
+  archive:
+    guidance:
+      - Provide a concise completion summary comparing outcome against approved specs.
+      - Update living specs in openspec/specs/ to reflect the newly integrated functionality.

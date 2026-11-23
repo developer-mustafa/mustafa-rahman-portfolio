@@ -1,0 +1,52 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "instructions": [
+    "AGENTS.md"
+  ],
+  "agents": {
+    "architect": {
+      "description": "Senior Software Architect responsible for OpenSpec requirements exploration, proposals, functional specifications, and technical architecture.",
+      "mode": "primary"
+    },
+    "coder": {
+      "description": "Senior Frontend Engineer responsible for incremental implementation strictly adhering to approved OpenSpec tasks.",
+      "mode": "subagent"
+    },
+    "reviewer": {
+      "description": "Security and Quality Assurance Lead responsible for linting, security audits, WCAG accessibility checks, and spec verification.",
+      "mode": "subagent"
+    }
+  },
+  "mcp": {
+    "servers": {
+      "filesystem": {
+        "type": "local",
+        "command": [
+          "npx",
+          "-y",
+          "@modelcontextprotocol/server-filesystem",
+          "E:\\Nahid\\learn-react"
+        ]
+      },
+      "github": {
+        "type": "local",
+        "command": [
+          "npx",
+          "-y",
+          "@modelcontextprotocol/server-github"
+        ],
+        "environment": {
+          "GITHUB_PERSONAL_ACCESS_TOKEN": "{env:GITHUB_PERSONAL_ACCESS_TOKEN}"
+        }
+      },
+      "playwright": {
+        "type": "local",
+        "command": [
+          "npx",
+          "-y",
+          "@executeautomation/playwright-mcp-server"
+        ]
+      }
+    }
+  }
+}

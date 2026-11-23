@@ -1,0 +1,15 @@
+{
+  "name": "mustafa-rahman-portfolio",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Mustafa Rahman - Senior Software Engineer & ICT Educator Portfolio",
+  "type": "module",
+  "scripts": {
+    "dev": "npm run --prefix react-with-vite start",
+    "start": "npm run --prefix react-with-vite start",
+    "build": "npm run --prefix react-with-vite build",
+    "lint": "npm run --prefix react-with-vite lint",
+    "preview": "npm run --prefix react-with-vite preview",
+    "test": "npm run lint && npm run build"
+  }
+}

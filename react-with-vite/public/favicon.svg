@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <rect width="100" height="100" rx="22" fill="#090a0f" />
+  <rect x="2" y="2" width="96" height="96" rx="20" fill="none" stroke="#10b981" stroke-width="3" stroke-opacity="0.4" />
+  <text x="50" y="64" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="44" font-weight="800" fill="#10b981" text-anchor="middle">MR</text>
+</svg>

@@ -1,0 +1,148 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  /* Default: Dark Theme (Deep Charcoal / Near-Black) */
+  --bg-page: #090a0f;
+  --bg-page-secondary: #0d111a;
+  --text-main: #e2e8f0;
+  --text-heading: #ffffff;
+  --text-muted: #94a3b8;
+  --text-dim: #64748b;
+  --card-bg: rgba(15, 18, 26, 0.75);
+  --card-border: rgba(255, 255, 255, 0.08);
+  --card-subtle-bg: rgba(18, 22, 32, 0.5);
+  --card-subtle-border: rgba(255, 255, 255, 0.06);
+  --card-inner-bg: rgba(255, 255, 255, 0.025);
+  --card-inner-border: rgba(255, 255, 255, 0.05);
+  --nav-bg: rgba(9, 10, 15, 0.85);
+  --nav-border: rgba(255, 255, 255, 0.08);
+  --input-bg: #080b12;
+  --input-border: rgba(255, 255, 255, 0.12);
+  --footer-bg: #07080c;
+  --modal-bg: #0d111a;
+  --pill-bg: rgba(255, 255, 255, 0.04);
+  --pill-border: rgba(255, 255, 255, 0.08);
+  --pill-text: #cbd5e1;
+  --grid-line: rgba(255, 255, 255, 0.03);
+  --spotlight-opacity: 0.16;
+  --accent: #10b981;
+  --accent-rgb: 16, 185, 129;
+}
+
+html.light,
+.light {
+  /* Light Theme (Clean Apple / Linear Modern Light) */
+  --bg-page: #f8fafc;
+  --bg-page-secondary: #f1f5f9;
+  --text-main: #1e293b;
+  --text-heading: #0f172a;
+  --text-muted: #475569;
+  --text-dim: #64748b;
+  --card-bg: rgba(255, 255, 255, 0.9);
+  --card-border: rgba(0, 0, 0, 0.08);
+  --card-subtle-bg: rgba(248, 250, 252, 0.85);
+  --card-subtle-border: rgba(0, 0, 0, 0.06);
+  --card-inner-bg: rgba(0, 0, 0, 0.025);
+  --card-inner-border: rgba(0, 0, 0, 0.06);
+  --nav-bg: rgba(248, 250, 252, 0.9);
+  --nav-border: rgba(0, 0, 0, 0.08);
+  --input-bg: #ffffff;
+  --input-border: rgba(0, 0, 0, 0.15);
+  --footer-bg: #f1f5f9;
+  --modal-bg: #ffffff;
+  --pill-bg: rgba(0, 0, 0, 0.04);
+  --pill-border: rgba(0, 0, 0, 0.08);
+  --pill-text: #334155;
+  --grid-line: rgba(0, 0, 0, 0.04);
+  --spotlight-opacity: 0.07;
+  --accent: #059669;
+  --accent-rgb: 5, 150, 105;
+}
+
+html {
+  scroll-behavior: auto;
+}
+
+body {
+  background-color: var(--bg-page);
+  color: var(--text-main);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  overflow-x: hidden;
+  transition: background-color 0.25s ease, color 0.25s ease;
+  selection-background-color: rgba(16, 185, 129, 0.25);
+  selection-color: #10b981;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-page);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+
+html.light ::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+/* Dynamic Glassmorphism Panels */
+.glass-panel {
+  background: var(--card-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--card-border);
+  transition: background-color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+html.light .glass-panel {
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+}
+
+.glass-panel-subtle {
+  background: var(--card-subtle-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--card-subtle-border);
+  transition: background-color 0.25s ease, border-color 0.25s ease;
+}
+
+html.light .glass-panel-subtle {
+  box-shadow: 0 2px 10px -1px rgba(0, 0, 0, 0.03);
+}
+
+/* Text and Headings standard overrides */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--text-heading);
+}
+
+/* Inner card item utility */
+.card-inner-item {
+  background: var(--card-inner-bg);
+  border: 1px solid var(--card-inner-border);
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Grid pattern background that respects theme */
+.bg-grid-pattern {
+  background-size: 40px 40px;
+  background-image:
+    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+}

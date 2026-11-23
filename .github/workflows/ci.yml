@@ -1,0 +1,44 @@
+name: CI & Quality Pipeline
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  audit-and-build:
+    name: Code Quality & Production Build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Source Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js Runtime
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'npm'
+          cache-dependency-path: react-with-vite/package-lock.json
+
+      - name: Install Application Dependencies
+        run: |
+          cd react-with-vite
+          npm ci
+
+      - name: Run ESLint Code Quality Audit
+        run: |
+          cd react-with-vite
+          npm run lint
+
+      - name: Run Vite Production Build
+        run: |
+          cd react-with-vite
+          npm run build
+
+      - name: Verify Build Artifacts
+        run: |
+          test -d react-with-vite/dist || exit 1
+          test -f react-with-vite/dist/index.html || exit 1
+          echo "Production build verified successfully!"
