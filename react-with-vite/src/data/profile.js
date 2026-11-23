@@ -8,15 +8,15 @@ export const personalProfile = {
     "Software Architect",
     "ICT Educator"
   ],
-  mainHeading: "Building Digital Experiences That Make a Difference.",
-  tagline: "Building Intelligent, Secure, and Scalable Digital Solutions.",
+  mainHeading: "Architecting Resilient Systems. Engineering at Scale.",
+  tagline: "A Decade of Engineering Leadership • 2014 – Present",
   shortTagline: "Engineer. Innovator. Architect.",
   alternativeTagline: "Building Technology. Empowering People. Creating Impact.",
   philosophy: "Build with purpose. Engineer with precision. Create with impact.",
   introduction: [
-    "I'm Mustafa Rahman, a Full-Stack AI Software Engineer and Software Architect passionate about building secure, scalable, and intelligent digital experiences.",
-    "I combine modern software engineering, AI integration, cloud technologies, and technical leadership to transform complex problems into high-performance, user-centered solutions.",
-    "From architecting enterprise web applications and AI-augmented tools to building digital platforms for educational institutions, I prioritize clean architecture and continuous learning."
+    "Senior Full-Stack Engineer & Software Architect with over a decade of production experience designing distributed cloud architectures, mission-critical systems, and intelligent AI workflows.",
+    "Specializing in resilient full-stack systems, clean architecture, and technical leadership to transform complex enterprise challenges into high-performance, fault-tolerant software.",
+    "From architecting enterprise applications across global teams (SolarWinds USA, Istanbul, Hyderabad) to mentoring 220+ technologists, I prioritize engineering longevity and precision."
   ],
   aboutMe: `I'm Mustafa Rahman, a Full-Stack AI Software Engineer, Technical Lead, and Software Architect with extensive professional experience across software engineering, modern web development, AI integration, and technology education.
 

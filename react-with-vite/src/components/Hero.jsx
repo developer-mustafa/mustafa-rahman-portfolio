@@ -55,9 +55,9 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[var(--text-heading)] leading-[1.08]"
             >
-              Building Digital Experiences{" "}
+              Architecting Resilient Systems.{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 via-teal-400 to-emerald-400 dark:from-emerald-400 dark:via-teal-300 dark:to-emerald-200">
-                That Make a Difference.
+                Engineering at Scale.
               </span>
             </motion.h1>
 

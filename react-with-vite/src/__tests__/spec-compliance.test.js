@@ -35,13 +35,23 @@ describe('OpenSpec v2.1 Portfolio-Core Requirement Compliance', () => {
     });
   });
 
-  describe('Requirement: Verified Engineering Skills Matrix', () => {
+  describe('Requirement: Verified Engineering Skills Matrix & Command Hub', () => {
     it('satisfies Scenario: Skill Filtering and Inspection (Zero Arbitrary Percentages)', () => {
       skillsCategories.forEach((domain) => {
         domain.skills.forEach((skill) => {
           expect(skill.percentage).toBeUndefined();
           expect(['core', 'knowledge', 'exploring']).toContain(skill.tier);
         });
+      });
+    });
+
+    it('satisfies Scenario: Desktop Command Hub Partitioning (Core Superpowers vs Supporting)', () => {
+      expect(skillsCategories.length).toBe(9);
+      skillsCategories.forEach((category) => {
+        const core = category.skills.filter((s) => s.tier === 'core');
+        const supporting = category.skills.filter((s) => s.tier !== 'core');
+        expect(core.length).toBeGreaterThan(0);
+        expect(core.length + supporting.length).toBe(category.skills.length);
       });
     });
   });

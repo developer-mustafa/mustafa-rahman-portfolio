@@ -40,7 +40,7 @@ export default function FloatingContact() {
               </div>
               <div className="overflow-hidden">
                 <p className="text-[10px] text-[var(--text-dim)] uppercase tracking-wider font-mono">WhatsApp</p>
-                <p className="text-xs font-semibold leading-tight">{personalProfile.social.phone}</p>
+                <p className="text-xs font-semibold leading-tight">Chat on WhatsApp</p>
               </div>
             </a>
 
