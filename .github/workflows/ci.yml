@@ -1,4 +1,4 @@
-name: CI & Quality Pipeline
+name: CI & Automated Testing Pipeline
 
 on:
   push:
@@ -7,8 +7,8 @@ on:
     branches: [ main, master ]
 
 jobs:
-  audit-and-build:
-    name: Code Quality & Production Build
+  test-and-build:
+    name: Code Quality, Automated Tests & Production Build
     runs-on: ubuntu-latest
 
     steps:
@@ -31,6 +31,11 @@ jobs:
         run: |
           cd react-with-vite
           npm run lint
+
+      - name: Run Vitest Automated Test Suite
+        run: |
+          cd react-with-vite
+          npm test
 
       - name: Run Vite Production Build
         run: |

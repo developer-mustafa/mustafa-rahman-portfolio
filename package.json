@@ -10,6 +10,6 @@
     "build": "npm run --prefix react-with-vite build",
     "lint": "npm run --prefix react-with-vite lint",
     "preview": "npm run --prefix react-with-vite preview",
-    "test": "npm run lint && npm run build"
+    "test": "npm run --prefix react-with-vite test && npm run lint && npm run build"
   }
 }
