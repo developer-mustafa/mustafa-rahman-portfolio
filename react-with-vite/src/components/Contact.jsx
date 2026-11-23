@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import { GithubIcon, LinkedinIcon, WhatsAppIcon } from "./BrandIcons";
 import { personalProfile } from "../data/profile";
+import ShimmerButton from "./magicui/ShimmerButton";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -421,10 +422,10 @@ export default function Contact() {
 
                 {/* Submit Button */}
                 <div className="pt-1">
-                  <button
+                  <ShimmerButton
                     type="submit"
                     disabled={status === "submitting"}
-                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-600 dark:hover:bg-emerald-400 text-white dark:text-black font-semibold text-xs sm:text-sm shadow-md shadow-emerald-500/20 transition-all duration-200 active:scale-95 disabled:opacity-50"
+                    className="w-full sm:w-auto px-6 py-2.5 text-xs sm:text-sm font-semibold rounded-xl"
                   >
                     {status === "submitting" ? (
                       <span>Sending Message...</span>
@@ -434,7 +435,7 @@ export default function Contact() {
                         <Send size={14} />
                       </>
                     )}
-                  </button>
+                  </ShimmerButton>
                 </div>
               </form>
             </div>

@@ -7,6 +7,36 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [1.2.0] - 2026-11-24
+
+### Magic UI Suite, Interactive Global Engineering Reach & Dual GPU-Mask Hardening
+
+#### Added
+- **Interactive Global Engineering Reach (`GlobalMap.jsx`)**:
+  - High-density SVG world vector projection displaying Mustafa Rahman's verified international engineering footprint (USA, Istanbul, Hyderabad, Bangladesh).
+  - Curved great-circle laser pulse arcs animated from the Bangladesh engineering base to global enterprise nodes.
+  - Interactive location filter pills, concentric pulsing radar beacons, and collision-free directional offset callouts.
+  - Compact 210px–240px desktop footprint with responsive dark (`#090a0f`) and light (`#f8fafc`) theme tokens.
+- **Magic UI Component Suite (`src/components/magicui/`)**:
+  - `BorderBeam.jsx`: Luminous border beam traveling along the container perimeter via CSS `offset-path: rect(...)` with dual-mask GPU exclusion (`mask-composite: intersect` / `destination-out`), completely eliminating light bleed into card text.
+  - `ShimmerButton.jsx`: High-polish accessible action button with continuous radiant sweep and responsive contrast.
+  - `NumberTicker.jsx`: Viewport-triggered numerical counter with smooth ease-out spring physics for verified metrics.
+  - `TechMarquee.jsx`: Dual-track infinite horizontal scrolling marquee featuring production architecture stacks.
+
+#### Hardened & Optimized
+- **BorderBeam Dual GPU Mask & Z-Index Isolation**:
+  - Encapsulated project card content inside `relative z-10` in `Projects.jsx`, `Hero.jsx`, and `Skills.jsx`.
+  - Permanently resolved conic-gradient dark shadow artifact on the Automata Pro showcase card.
+- **OpenSpec Living Specs**:
+  - Added complete OpenSpec change artifacts for `magic-ui-shadcn-global-reach` (`proposal.md`, `design.md`, `specs/ui-enhancements/spec.md`, `tasks.md`).
+
+#### Verified
+- 0 ESLint warnings or errors.
+- 19/19 Vitest test cases passing.
+- Production build verified in ~4.6 seconds.
+
+---
+
 ## [1.1.0] - 2026-11-24
 
 ### Desktop Command Hub, Senior Architect Copywriting & Modal Portal Architecture

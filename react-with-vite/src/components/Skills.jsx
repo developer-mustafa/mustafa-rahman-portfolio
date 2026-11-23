@@ -22,6 +22,7 @@ import {
   futureFocusedRadar,
   professionalLeadershipSkills
 } from "../data/skills";
+import BorderBeam from "./magicui/BorderBeam";
 
 const iconMap = {
   Code2,
@@ -223,8 +224,9 @@ export default function Skills() {
                 transition={{ duration: 0.18, ease: "easeOut" }}
                 className="glass-panel p-4 sm:p-5 md:p-6 rounded-2xl border border-emerald-500/25 relative overflow-hidden flex flex-col justify-between min-h-[380px]"
               >
+                <BorderBeam duration={11} size={300} colorFrom="#10b981" colorTo="#06b6d4" />
                 {/* Workstation Top Meta Header */}
-                <div>
+                <div className="relative z-10">
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-[var(--card-inner-border)] mb-3">
                     <div className="flex items-center gap-3">
                       <div className="w-9 h-9 rounded-xl bg-emerald-500/15 text-emerald-500 border border-emerald-500/30 flex items-center justify-center shrink-0">
@@ -352,7 +354,7 @@ export default function Skills() {
                 </div>
 
                 {/* Desktop High-Grade Inspector Strip */}
-                <div className="mt-3.5 pt-2.5 border-t border-[var(--card-inner-border)] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 text-[11px] font-mono">
+                <div className="mt-3.5 pt-2.5 border-t border-[var(--card-inner-border)] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 text-[11px] font-mono relative z-10">
                   <div className="flex items-center gap-2 min-w-0">
                     <Info size={13} className="text-emerald-500 shrink-0" />
                     <span className="text-[var(--text-dim)] shrink-0">Focus:</span>

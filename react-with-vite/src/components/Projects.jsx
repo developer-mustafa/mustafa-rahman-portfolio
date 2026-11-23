@@ -8,6 +8,7 @@ import {
 import { GithubIcon } from "./BrandIcons";
 import { projectsData } from "../data/projects";
 import ProjectModal from "./ProjectModal";
+import BorderBeam from "./magicui/BorderBeam";
 
 export default function Projects() {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -158,65 +159,69 @@ export default function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group glass-panel rounded-2xl hover:border-emerald-500/40 transition-all duration-300 p-5 sm:p-6 flex flex-col justify-between"
+              className="group glass-panel rounded-2xl hover:border-emerald-500/40 transition-all duration-300 p-5 sm:p-6 flex flex-col justify-between relative overflow-hidden"
             >
-              <div>
-                {/* Visual Mockup */}
-                <div className="mb-5 cursor-pointer" onClick={() => setSelectedProject(project)}>
-                  {renderMockup(project.id)}
-                </div>
-
-                {/* Header: Title & Category */}
-                <div className="flex items-start justify-between gap-2">
-                  <div>
-                    <span className="text-[10px] uppercase tracking-wider font-semibold text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20 font-mono">
-                      {project.category}
-                    </span>
-                    <h3
-                      onClick={() => setSelectedProject(project)}
-                      className="text-xl font-bold text-[var(--text-heading)] mt-2 group-hover:text-emerald-500 transition-colors cursor-pointer flex items-center gap-1.5"
-                    >
-                      <span>{project.name}</span>
-                      <ArrowUpRight size={18} className="opacity-0 group-hover:opacity-100 transition-opacity" />
-                    </h3>
+              {project.id === "automata-pro" && (
+                <BorderBeam duration={8} size={250} colorFrom="#10b981" colorTo="#06b6d4" />
+              )}
+              <div className="relative z-10 flex-1 flex flex-col justify-between">
+                <div>
+                  {/* Visual Mockup */}
+                  <div className="mb-5 cursor-pointer" onClick={() => setSelectedProject(project)}>
+                    {renderMockup(project.id)}
                   </div>
 
-                  <button
-                    onClick={() => setSelectedProject(project)}
-                    className="p-1.5 text-[var(--text-dim)] hover:text-[var(--text-heading)] rounded-lg hover:bg-black/5 dark:hover:bg-white/5 transition-colors"
-                    title="View Architectural Breakdown"
-                    aria-label="View Details"
-                  >
-                    <Info size={16} />
-                  </button>
-                </div>
+                  {/* Header: Title & Category */}
+                  <div className="flex items-start justify-between gap-2">
+                    <div>
+                      <span className="text-[10px] uppercase tracking-wider font-semibold text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20 font-mono">
+                        {project.category}
+                      </span>
+                      <h3
+                        onClick={() => setSelectedProject(project)}
+                        className="text-xl font-bold text-[var(--text-heading)] mt-2 group-hover:text-emerald-500 transition-colors cursor-pointer flex items-center gap-1.5"
+                      >
+                        <span>{project.name}</span>
+                        <ArrowUpRight size={18} className="opacity-0 group-hover:opacity-100 transition-opacity" />
+                      </h3>
+                    </div>
 
-                {/* Subtitle / Tagline */}
-                <p className="text-xs text-emerald-600 dark:text-emerald-400 font-medium mt-1 font-mono">
-                  {project.tagline}
-                </p>
-
-                {/* Description */}
-                <p className="mt-3 text-xs sm:text-sm text-[var(--text-muted)] leading-relaxed line-clamp-3">
-                  {project.description}
-                </p>
-
-                {/* Tech Pills */}
-                <div className="mt-4 flex flex-wrap gap-1.5">
-                  {project.technologies.map((tech, tIdx) => (
-                    <span
-                      key={tIdx}
-                      className="px-2 py-0.5 rounded text-[11px] font-medium card-inner-item text-[var(--text-muted)]"
+                    <button
+                      onClick={() => setSelectedProject(project)}
+                      className="p-1.5 text-[var(--text-dim)] hover:text-[var(--text-heading)] rounded-lg hover:bg-black/5 dark:hover:bg-white/5 transition-colors"
+                      title="View Architectural Breakdown"
+                      aria-label="View Details"
                     >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
+                      <Info size={16} />
+                    </button>
+                  </div>
 
-              {/* Action Buttons */}
-              <div className="mt-6 pt-4 border-t border-[var(--card-inner-border)] flex items-center justify-between gap-3">
-                <div className="flex items-center gap-2">
+                  {/* Subtitle / Tagline */}
+                  <p className="text-xs text-emerald-600 dark:text-emerald-400 font-medium mt-1 font-mono">
+                    {project.tagline}
+                  </p>
+
+                  {/* Description */}
+                  <p className="mt-3 text-xs sm:text-sm text-[var(--text-muted)] leading-relaxed line-clamp-3">
+                    {project.description}
+                  </p>
+
+                  {/* Tech Pills */}
+                  <div className="mt-4 flex flex-wrap gap-1.5">
+                    {project.technologies.map((tech, tIdx) => (
+                      <span
+                        key={tIdx}
+                        className="px-2 py-0.5 rounded text-[11px] font-medium card-inner-item text-[var(--text-muted)]"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Action Buttons */}
+                <div className="mt-6 pt-4 border-t border-[var(--card-inner-border)] flex items-center justify-between gap-3">
+                  <div className="flex items-center gap-2">
                   {project.website ? (
                     <a
                       href={project.website}
@@ -260,7 +265,8 @@ export default function Projects() {
                   Features &rarr;
                 </button>
               </div>
-            </motion.div>
+            </div>
+          </motion.div>
           ))}
         </div>
       </div>

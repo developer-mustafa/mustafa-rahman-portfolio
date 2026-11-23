@@ -9,6 +9,9 @@ import {
 } from "lucide-react";
 import { GithubIcon, LinkedinIcon, WhatsAppIcon } from "./BrandIcons";
 import { personalProfile } from "../data/profile";
+import BorderBeam from "./magicui/BorderBeam";
+import ShimmerButton from "./magicui/ShimmerButton";
+import TechMarquee from "./magicui/TechMarquee";
 
 export default function Hero() {
   const scrollToProjects = () => {
@@ -29,7 +32,7 @@ export default function Hero() {
       <div className="max-w-7xl mx-auto w-full relative z-10">
         {/* Two-Column Editorial Hero Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-          
+
           {/* Left Column: Narrative, Typography & CTAs (Span 7) */}
           <div className="lg:col-span-7 flex flex-col items-start text-left order-2 lg:order-1">
             {/* Availability / Status Pill */}
@@ -110,13 +113,13 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.32 }}
               className="mt-5 sm:mt-6 flex flex-wrap items-center gap-4"
             >
-              <button
+              <ShimmerButton
                 onClick={scrollToProjects}
-                className="group flex items-center gap-2 px-6 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-600 dark:hover:bg-emerald-400 text-white dark:text-black font-semibold text-xs sm:text-sm shadow-lg shadow-emerald-500/20 transition-all duration-200 active:scale-95"
+                className="px-6 py-3 text-xs sm:text-sm font-semibold rounded-xl"
               >
                 <span>View Featured Projects</span>
                 <ArrowRight size={15} className="group-hover:translate-x-0.5 transition-transform" />
-              </button>
+              </ShimmerButton>
 
               <button
                 onClick={scrollToContact}
@@ -193,8 +196,10 @@ export default function Hero() {
 
               {/* Main Showcase Glass Card */}
               <div className="relative rounded-3xl glass-panel p-3.5 sm:p-4 overflow-hidden shadow-2xl border border-[var(--card-border)]">
+                <BorderBeam duration={8} size={250} colorFrom="#10b981" colorTo="#06b6d4" />
+
                 {/* High-Resolution Portrait Container */}
-                <div className="relative overflow-hidden rounded-2xl aspect-[4/5] bg-gradient-to-b from-white/5 to-black/10">
+                <div className="relative z-10 overflow-hidden rounded-2xl aspect-[4/5] bg-gradient-to-b from-white/5 to-black/10">
                   <img
                     src="/images/profile eng single.webp"
                     alt="Mustafa Rahman - Senior Software Engineer"
@@ -207,7 +212,7 @@ export default function Hero() {
                 </div>
 
                 {/* Floating Credential Footer inside Card */}
-                <div className="mt-3.5 p-3 rounded-xl card-inner-item flex items-center justify-between">
+                <div className="mt-3.5 p-3 rounded-xl card-inner-item flex items-center justify-between relative z-10">
                   <div className="flex items-center gap-2.5">
                     <span className="relative flex h-2.5 w-2.5">
                       <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
@@ -254,6 +259,11 @@ export default function Hero() {
             </div>
           ))}
         </motion.div>
+
+        {/* Magic UI Infinite Tech Marquee */}
+        <div className="mt-8 sm:mt-10">
+          <TechMarquee />
+        </div>
       </div>
     </section>
   );

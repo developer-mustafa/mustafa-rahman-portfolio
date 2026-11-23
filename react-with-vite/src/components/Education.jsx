@@ -1,12 +1,13 @@
 import { motion } from "motion/react";
-import { 
-  GraduationCap, 
-  BookOpen, 
+import {
+  GraduationCap,
+  BookOpen,
   Award,
   CheckCircle2,
   Info
 } from "lucide-react";
 import { educationData } from "../data/education";
+import NumberTicker from "./magicui/NumberTicker";
 
 export default function Education() {
   return (
@@ -120,7 +121,10 @@ export default function Education() {
                   className="flex-1 md:flex-none p-4 rounded-xl card-inner-item text-center min-w-[140px]"
                 >
                   <div className="text-2xl sm:text-3xl font-extrabold text-emerald-600 dark:text-emerald-400 font-mono">
-                    {m.value}
+                    <NumberTicker
+                      value={parseInt(m.value, 10)}
+                      suffix={m.value.replace(/^[0-9]+/, "")}
+                    />
                   </div>
                   <div className="text-xs font-semibold text-[var(--text-heading)] mt-0.5">
                     {m.metric}

@@ -1,11 +1,12 @@
 import { motion } from "motion/react";
-import { 
-  Globe2, 
-  Terminal, 
-  Quote, 
+import {
+  Globe2,
+  Terminal,
+  Quote,
   Target
 } from "lucide-react";
 import { personalProfile } from "../data/profile";
+import GlobalMap from "./GlobalMap";
 
 export default function About() {
   return (
@@ -103,15 +104,31 @@ export default function About() {
                   Global Perspective
                 </span>
                 <h3 className="text-lg font-bold text-[var(--text-heading)] mt-1">
-                  International Working Environments
+                  International Working Scope
                 </h3>
-                <p className="mt-3 text-xs text-[var(--text-muted)] leading-relaxed">
-                  Collaborating across cross-cultural teams has enriched my understanding of international engineering rigor, modern standards, and asynchronous team communication.
+                <p className="mt-2 text-xs text-[var(--text-muted)] leading-relaxed">
+                  Distributed production engineering across US enterprise teams, Istanbul tech hubs, and Hyderabad web solutions.
                 </p>
+              </div>
+
+              <div className="mt-4 pt-3 border-t border-[var(--card-inner-border)] flex items-center justify-between text-[11px] font-mono text-emerald-600 dark:text-emerald-400">
+                <span>4 Geographic Hubs</span>
+                <span className="font-semibold">Interactive Map ↓</span>
               </div>
             </div>
           </motion.div>
         </div>
+
+        {/* Interactive Global Engineering Reach Map */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mt-6 sm:mt-8"
+        >
+          <GlobalMap />
+        </motion.div>
 
         {/* Visual Engineering Versatility Banner (Using main 4 style image) */}
         <motion.div
