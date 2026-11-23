@@ -1,0 +1,54 @@
+name: Release & Packaging Pipeline
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-release:
+    name: Build & Publish GitHub Release
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Source Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js Runtime
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'npm'
+          cache-dependency-path: react-with-vite/package-lock.json
+
+      - name: Install Application Dependencies
+        run: |
+          cd react-with-vite
+          npm ci
+
+      - name: Run Vitest Automated Test Suite
+        run: |
+          cd react-with-vite
+          npm test
+
+      - name: Run Vite Production Build
+        run: |
+          cd react-with-vite
+          npm run build
+
+      - name: Archive Production Bundle
+        run: |
+          cd react-with-vite
+          zip -r ../mustafa-rahman-portfolio-production-${{ github.ref_name }}.zip dist/
+
+      - name: Create Official GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: "Mustafa Rahman Portfolio ${{ github.ref_name }}"
+          files: mustafa-rahman-portfolio-production-${{ github.ref_name }}.zip
+          generate_release_notes: true
+          draft: false
+          prerelease: false
