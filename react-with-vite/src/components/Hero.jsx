@@ -23,7 +23,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative pt-24 sm:pt-26 lg:pt-28 pb-12 sm:pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden"
+      className="relative pt-16 sm:pt-18 lg:pt-20 pb-10 sm:pb-12 px-4 sm:px-6 lg:px-8 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto w-full relative z-10">
         {/* Two-Column Editorial Hero Grid */}
@@ -36,7 +36,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-panel-subtle border border-emerald-500/25 text-xs text-[var(--text-muted)] mb-4 shadow-sm"
+              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-panel-subtle border border-emerald-500/25 text-xs text-[var(--text-muted)] mb-3 shadow-sm"
             >
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
@@ -65,7 +65,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.15 }}
-              className="mt-4 flex flex-wrap items-center gap-2 text-xs sm:text-sm font-semibold text-emerald-600 dark:text-emerald-400 font-mono tracking-wide"
+              className="mt-3 flex flex-wrap items-center gap-2 text-xs sm:text-sm font-semibold text-emerald-600 dark:text-emerald-400 font-mono tracking-wide"
             >
               <span className="px-2.5 py-0.5 rounded-md card-inner-item">Full-Stack AI Software Engineer</span>
               <span className="text-[var(--text-dim)]">•</span>
@@ -79,7 +79,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.22 }}
-              className="mt-6 text-sm sm:text-base text-[var(--text-muted)] font-normal leading-relaxed space-y-2.5 max-w-2xl"
+              className="mt-4 text-sm sm:text-base text-[var(--text-muted)] font-normal leading-relaxed space-y-2 max-w-2xl"
             >
               <p>{personalProfile.introduction[0]}</p>
               <p className="text-xs sm:text-sm text-[var(--text-dim)]">{personalProfile.introduction[1]}</p>
@@ -90,7 +90,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.28 }}
-              className="mt-6 flex flex-wrap items-center gap-3 text-xs text-[var(--text-dim)]"
+              className="mt-4 flex flex-wrap items-center gap-3 text-xs text-[var(--text-dim)]"
             >
               <div className="flex items-center gap-1.5 px-3 py-1 rounded-md card-inner-item">
                 <MapPin size={13} className="text-emerald-500" />
@@ -107,7 +107,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.32 }}
-              className="mt-8 flex flex-wrap items-center gap-4"
+              className="mt-5 sm:mt-6 flex flex-wrap items-center gap-4"
             >
               <button
                 onClick={scrollToProjects}
@@ -219,7 +219,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.42 }}
-          className="mt-10 sm:mt-12 lg:mt-14 w-full grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4"
+          className="mt-8 sm:mt-10 lg:mt-12 w-full grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4"
         >
           {personalProfile.highlights.map((item, idx) => (
             <div

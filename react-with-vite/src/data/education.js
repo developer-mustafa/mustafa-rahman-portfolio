@@ -40,16 +40,16 @@ export const educationData = {
     note: "Reported academic indicators achieved during the relevant teaching period; presented with verified context.",
     metrics: [
       {
-        value: "7",
+        value: "226+",
         metric: "HSC ICT A+ Results",
-        period: "2022 Teaching Period",
-        context: "Reported HSC ICT A+ grades achieved by mentored students."
+        period: "From 2014 to Present",
+        context: "Reported SSC & HSC ICT A+ grades achieved by mentored students."
       },
       {
-        value: "100%",
+        value: "90%",
         metric: "HSC ICT Pass Rate",
-        period: "Teaching Period",
-        context: "Reported 100% pass rate achieved by students during the relevant teaching period."
+        period: "From 2014 to Present",
+        context: "Reported SSC & HSC ICT 90% pass rate achieved by students during the relevant teaching period."
       }
     ]
   }
