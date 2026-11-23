@@ -69,10 +69,10 @@ function App() {
       <BackgroundEffects />
 
       {/* Main sticky navigation */}
-      <Navbar 
-        activeSection={activeSection} 
-        theme={theme} 
-        toggleTheme={toggleTheme} 
+      <Navbar
+        activeSection={activeSection}
+        theme={theme}
+        toggleTheme={toggleTheme}
       />
 
       {/* Main Content Sections */}

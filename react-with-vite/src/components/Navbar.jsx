@@ -1,13 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import {
-  Menu,
-  X,
-  Clock,
-  Sun,
-  Moon,
-  Mail
-} from "lucide-react";
+import { Menu, X, Clock, Sun, Moon, Mail } from "lucide-react";
 import { personalProfile } from "../data/profile";
 
 const navItems = [
