@@ -5,6 +5,8 @@
 [![Vite](https://img.shields.io/badge/Vite-8.3.6-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
 [![React](https://img.shields.io/badge/React-19.3.1-61DAFB?logo=react&logoColor=black)](https://react.dev/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4.3.5-38B2AC?logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![Vitest](https://img.shields.io/badge/Vitest-17%20Passing-success?logo=vitest&logoColor=white)](https://vitest.dev/)
+[![Vercel](https://img.shields.io/badge/Vercel-Connected-black?logo=vercel&logoColor=white)](https://mustafarahman.vercel.app)
 [![OpenSpec](https://img.shields.io/badge/OpenSpec-SDD_v2.1.1-10B981)](https://openspec.dev/)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
@@ -46,7 +48,8 @@ A world-class personal engineering portfolio engineered with an Awwwards-caliber
 ```
 .
 ├── .github/
-│   └── workflows/ci.yml       # GitHub Actions CI/CD Pipeline
+│   ├── workflows/ci.yml       # GitHub Actions CI Pipeline (Lint, Vitest & Build)
+│   └── workflows/release.yml  # GitHub Actions Automated Release Pipeline (Tags)
 ├── .agents/
 │   └── skills/                # Agent Skills (OpenSpec + Design + Motion)
 ├── openspec/
