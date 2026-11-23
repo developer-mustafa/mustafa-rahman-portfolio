@@ -24,7 +24,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative pt-16 sm:pt-18 lg:pt-20 pb-10 sm:pb-12 px-4 sm:px-6 lg:px-8 overflow-hidden"
+      className="relative pt-14 sm:pt-16 lg:pt-16 pb-8 sm:pb-10 px-4 sm:px-6 lg:px-8 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto w-full relative z-10">
         {/* Two-Column Editorial Hero Grid */}
